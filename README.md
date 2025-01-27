@@ -19,15 +19,16 @@ One-shot:
 1.	Server-generated private key; ex.: cert issuance returns a p12 with a private key in it.
 2.	Use an already-issued signing cert to sign the KEM CSR. \[7\]
 3.	Unsigned id-algNone \[24\]
+4.  CRMF encrCert used in CMP \[10\]
  
 Challenge-response Proof-of-Possession:
 (ie requires at least two round-trips to the CA)
 
-4.	CMPv3 \[8\]
+5.	CMPv3 \[8\]
     * Direct PoP
     * Inderect PoP
-5.	CRMF CSR \[9\]
-6.	CMC-over-EST \[9a\]
+6.	CRMF CSR \[9\]
+7.	CMC-over-EST \[9a\]
 
 
 ## KEM enrollment usecases to explore
@@ -53,5 +54,6 @@ Challenge-response Proof-of-Possession:
 * \[8\]: cmpv3 - draft-ietf-lamps-rfc4210bis
 * \[9\] KEM PoP in CRMF – maybe does not exist yet?
 * \[9a\]: draft-ietf-lamps-rfc5272bis
+* \[10\]: https://datatracker.ietf.org/doc/html/rfc4211#section-4.2
 * \[24\]: draft-davidben-x509-alg-none
 
